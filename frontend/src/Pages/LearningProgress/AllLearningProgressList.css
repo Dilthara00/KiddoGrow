@@ -1,0 +1,357 @@
+/* Main Layout - Child-friendly version */
+.learning-progress-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #E6F7FF; /* Light blue background */
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,20 L30,20 L30,30 L20,30 Z' fill='%23FFD0EF' fill-opacity='0.4'/%3E%3C/svg%3E");
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+}
+
+.progress-main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px; /* Adjust based on sidebar width */
+}
+
+/* Header Styles */
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #FFEB3B; /* Bright yellow header */
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 4px 0 #FFC107;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-content h1 {
+  color: #8E44AD; /* Purple text */
+  font-size: 2rem;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.header-icon {
+  color: #FF5722; /* Orange icon */
+  font-size: 2rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button Styles */
+.primary-button, .secondary-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+}
+
+.primary-button {
+  background-color: #FF5722; /* Orange */
+  color: white;
+  border: none;
+}
+
+.primary-button:hover {
+  background-color: #E64A19;
+  transform: translateY(-2px);
+}
+
+.primary-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+}
+
+.secondary-button {
+  background-color: #8BC34A; /* Light green */
+  color: white;
+  border: none;
+}
+
+.secondary-button:hover {
+  background-color: #7CB342;
+  transform: translateY(-2px);
+}
+
+.secondary-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.05);
+  border: 3px dashed #CDDC39; /* Lime border */
+}
+
+.empty-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  background-color: #E1BEE7; /* Light purple */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9C27B0;
+  font-size: 3rem;
+}
+
+.empty-state h3 {
+  color: #9C27B0; /* Purple */
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.empty-state p {
+  color: #5E35B1; /* Deep purple */
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Progress Grid */
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.progress-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 3px solid #03A9F4; /* Blue border */
+}
+
+.progress-card:hover {
+  transform: translateY(-8px) rotate(1deg);
+  box-shadow: 0 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px dotted #E0F7FA; /* Dotted border */
+  background-color: #B3E5FC; /* Light blue */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FFF59D; /* Light yellow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF9800; /* Orange */
+  border: 3px solid #FFEB3B; /* Yellow border */
+  font-size: 1.5rem;
+}
+
+.user-info h3 {
+  font-size: 1.2rem;
+  color: #5E35B1; /* Deep purple */
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: #FF9800; /* Orange */
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.icon-button:hover {
+  color: #F57C00;
+  background-color: #FFF9C4; /* Light yellow */
+  transform: scale(1.2) rotate(5deg);
+}
+
+.icon-button.danger:hover {
+  color: #F44336; /* Red */
+  background-color: #FFEBEE; /* Light red */
+  transform: scale(1.2) rotate(-5deg);
+}
+
+/* Card Content */
+.card-content {
+  padding: 1.5rem;
+}
+
+.skill-title {
+  color: #673AB7; /* Deep purple */
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skill-field {
+  background-color: #BBDEFB; /* Light blue */
+  color: #1976D2; /* Blue */
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 0 #1976D2;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 20px; /* Thicker progress bar */
+  background-color: #E0E0E0;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  position: relative;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #2196F3, #9C27B0); /* Gradient blue to purple */
+  border-radius: 10px;
+  transition: width 1s ease;
+  position: relative;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%
+  );
+  background-size: 20px 20px;
+  animation: move-stripes 2s linear infinite;
+  border-radius: 10px;
+}
+
+@keyframes move-stripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 0; }
+}
+
+.progress-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.description {
+  margin: 1.5rem 0;
+  background-color: #F5F5F5;
+  padding: 1rem;
+  border-radius: 15px;
+  border-left: 5px solid #9C27B0; /* Purple border */
+}
+
+.description h4 {
+  color: #FF5722; /* Orange */
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.description p {
+  color: #5E35B1; /* Deep purple */
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7B1FA2; /* Purple */
+  font-size: 1rem;
+  background-color: #E1BEE7; /* Light purple */
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-flex;
+}
+
+/* Add some playful elements */
+.progress-card:nth-child(odd) {
+  border-color: #FF9800; /* Orange border for odd cards */
+}
+
+.progress-card:nth-child(even) {
+  border-color: #8BC34A; /* Green border for even cards */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .progress-main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .progress-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .progress-grid {
+    grid-template-columns: 1fr;
+  }
+}

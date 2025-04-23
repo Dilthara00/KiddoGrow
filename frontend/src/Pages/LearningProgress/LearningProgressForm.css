@@ -1,0 +1,291 @@
+/* Learning Progress - Child-Friendly Design */
+.learning-progress-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f9ff; /* Light blue background */
+  background-image: radial-gradient(circle at 10% 20%, rgba(255,214,102,0.1) 0%, transparent 20%),
+                   radial-gradient(circle at 90% 80%, rgba(78,205,196,0.1) 0%, transparent 20%);
+  font-family: 'Comic Sans MS', 'KidZone', 'Arial Rounded MT Bold', sans-serif;
+}
+
+.progress-main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px; /* Adjust based on sidebar width */
+  display: flex;
+  justify-content: center;
+}
+
+/* Form Container - Playful Design */
+.progress-form-container {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(255,158,94,0.15);
+  padding: 2.5rem;
+  border: 4px solid #FFD166; /* Yellow border */
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-form-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 50px;
+  height: 50px;
+  background: #FF6B6B;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Form Header - Fun Styling */
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: #FF6B6B; /* Bright orange-red */
+  position: relative;
+}
+
+.form-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 0 rgba(255,214,102,0.3);
+}
+
+.form-icon {
+  font-size: 2rem;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+/* Form Styles - Colorful and Playful */
+.progress-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.form-group label {
+  font-weight: 700;
+  color: #4ECDC4; /* Bright teal */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.form-group label::before {
+  content: '✏️';
+  margin-right: 5px;
+}
+
+.input-icon {
+  color: #FF9E5E; /* Orange */
+  font-size: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 1rem;
+  border: 2px solid #FFD166; /* Yellow */
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  background: #FFF9E6; /* Light yellow */
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #FF6B6B;
+  box-shadow: 0 0 0 4px rgba(255,107,107,0.2);
+  transform: scale(1.01);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Select Wrapper - Custom Styling */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #FF6B6B;
+  font-size: 1.2rem;
+}
+
+/* Date Group - Colorful Layout */
+.date-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Submit Button - Big and Playful */
+.submit-button {
+  background-color: #4ECDC4; /* Bright teal */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 8px rgba(78,205,196,0.3);
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-1deg);
+}
+
+.submit-button:hover {
+  background-color: #3BBDB4;
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 6px 12px rgba(78,205,196,0.4);
+}
+
+.submit-button::before {
+  content: '🚀';
+  margin-right: 8px;
+  font-size: 1.4rem;
+}
+
+.submit-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s;
+}
+
+.submit-button:hover::after {
+  transform: translate(-50%, -50%) scale(20);
+  opacity: 0;
+}
+
+/* Progress Indicators - Fun Visuals */
+.progress-indicator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.progress-star {
+  color: #FFD166;
+  font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .progress-main-content {
+      margin-left: 0;
+      padding: 1rem;
+  }
+
+  .progress-form-container {
+      padding: 1.5rem;
+      border-width: 3px;
+  }
+
+  .form-header h1 {
+      font-size: 1.5rem;
+  }
+
+  .date-group {
+      grid-template-columns: 1fr;
+  }
+
+  .submit-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+  }
+}
+
+/* Additional Playful Elements */
+.form-group:nth-child(odd) label {
+  color: #FF9E5E; /* Orange */
+}
+
+.form-group:nth-child(even) label {
+  color: #4ECDC4; /* Teal */
+}
+
+/* Confetti Animation */
+@keyframes confetti-fall {
+  0% { transform: translateY(-100px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+.success-confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #FF6B6B;
+  opacity: 0;
+  animation: confetti-fall 3s linear forwards;
+  z-index: 1000;
+}
+
+/* Character Mascot (position this with HTML) */
+.character-mascot {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 100px;
+  height: 100px;
+  background-image: url('mascot.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
