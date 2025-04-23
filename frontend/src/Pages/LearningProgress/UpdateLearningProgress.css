@@ -1,0 +1,207 @@
+/* Main Layout */
+.update-progress-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffebcd 0%, #ffe4e1 100%); /* Soft pastel gradient for kids */
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* Fun, kid-friendly font */
+}
+
+/* Main Content */
+.update-progress-main {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px; /* Adjust based on sidebar width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Container */
+.form-container {
+  width: 100%;
+  max-width: 750px;
+  background: #fff8dc; /* Warm, creamy background */
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  border: 3px solid #ffb6c1; /* Playful pink border */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Form Header */
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  color: #ff4500; /* Bright, cheerful orange */
+}
+
+.form-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-icon {
+  color: #ff4500;
+  font-size: 2.5rem;
+  animation: bounce 1s infinite; /* Fun bouncing animation */
+}
+
+/* Form Styles */
+.progress-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #ff69b4; /* Bright pink for labels */
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.input-icon {
+  color: #ff69b4;
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 1rem;
+  border: 2px solid #87ceeb; /* Sky blue borders */
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background: #f0f8ff; /* Light blue input background */
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ff4500; /* Orange focus border */
+  box-shadow: 0 0 8px rgba(255, 69, 0, 0.3);
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Select Wrapper */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+  width: 100%;
+  padding-right: 3rem;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #ff4500;
+  font-size: 1.3rem;
+}
+
+/* Date Group */
+.date-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Submit Button */
+.submit-button {
+  background: #32cd32; /* Vibrant lime green */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+  background: #228b22; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale-up effect */
+}
+
+/* Fun Animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .update-progress-main {
+      margin-left: 0;
+      padding: 1.5rem;
+  }
+
+  .form-container {
+      padding: 1.5rem;
+      border-width: 2px;
+  }
+
+  .date-group {
+      grid-template-columns: 1fr;
+  }
+
+  .form-header h1 {
+      font-size: 1.5rem;
+  }
+
+  .submit-button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+  }
+}
+
+/* Decorative Elements */
+.form-container::before {
+  content: '✨';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+.form-container::after {
+  content: '🌟';
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 2rem;
+  opacity: 0.3;
+}
