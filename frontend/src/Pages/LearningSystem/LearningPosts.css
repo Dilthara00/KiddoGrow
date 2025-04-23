@@ -1,0 +1,174 @@
+.container {
+  max-width: 1200px;
+  height: 628px;
+  margin: 0 auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  background: #f0f9ff;
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(66, 153, 225, 0.15);
+  font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive;
+  border: 6px solid #4cc2ff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 3px dashed #ffb347;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff6b6b;
+  text-shadow: 1px 1px 0 #ffd166;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #4cc2ff;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  border: 3px solid #0096d6;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 #0096d6;
+}
+
+.button.secondary {
+  background-color: #ffde7d;
+  color: #ff8c42;
+  border: 3px solid #ffb347;
+  box-shadow: 0 4px 0 #ffb347;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #0096d6;
+}
+
+.button.secondary:hover {
+  box-shadow: 0 6px 0 #ffb347;
+}
+
+.button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #0096d6;
+}
+
+.button.secondary:active {
+  box-shadow: 0 2px 0 #ffb347;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #ffffff;
+  border: 4px solid #ffd166;
+  border-radius: 20px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(255, 188, 66, 0.2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #a3e635;
+  border: 3px solid #65a30d;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6366f1;
+}
+
+.cardDescription {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #d8b4fe;
+  color: #7e22ce;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px dashed #9333ea;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.likeButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.likeButton:hover {
+  transform: scale(1.1);
+}
+
+.likeButton.liked {
+  color: #ec4899;
+}
