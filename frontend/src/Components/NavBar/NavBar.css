@@ -1,0 +1,419 @@
+/* Modern Kid-Friendly Navbar Component */
+.navbar-component {
+  background: linear-gradient(135deg, #FFB8E0, #EC7FA9);
+  padding: 0 2rem;
+  height: 80px;
+  box-shadow: 0 4px 12px rgba(190, 89, 133, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #BE5985;
+}
+
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Logo Styles */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-logo img {
+  width: auto;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.1));
+}
+
+.navbar-logo-text {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 0 #BE5985;
+}
+
+/* Right Section with Icons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Icons Container */
+.navbar-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+}
+
+/* Icon Container */
+.navbar-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Icon Styles */
+.navbar-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-shadow: 0 3px 6px rgba(190, 89, 133, 0.2);
+}
+
+.navbar-icon svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-icon:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1) rotate(10deg);
+}
+
+.navbar-icon:hover svg {
+  transform: scale(1.2);
+}
+
+/* Notification Badge */
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #FFD700;
+  color: #BE5985;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+/* User Avatar Styles */
+.navbar-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: white;
+  color: #EC7FA9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 2px solid white;
+  box-shadow: 0 3px 6px rgba(190, 89, 133, 0.2);
+}
+
+.navbar-avatar:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Dropdown Menu */
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(190, 89, 133, 0.3);
+  min-width: 200px;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 1001;
+  border: 2px solid #FFB8E0;
+}
+
+.navbar-dropdown:hover .navbar-dropdown-menu,
+.navbar-dropdown:focus-within .navbar-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Items */
+.navbar-dropdown-item {
+  padding: 0.75rem 1.25rem;
+  color: #BE5985;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbar-dropdown-item:hover {
+  background-color: #FFB8E0;
+  color: white;
+  transform: translateX(5px);
+}
+
+.navbar-dropdown-item svg {
+  width: 18px;
+  height: 18px;
+  color: currentColor;
+}
+
+/* User Card Styles */
+.navbar-user-card {
+  position: absolute;
+  top: 90px;
+  right: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(190, 89, 133, 0.3);
+  width: 320px;
+  overflow: hidden;
+  z-index: 1001;
+  animation: bounceIn 0.4s ease;
+  border: 3px solid #FFB8E0;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  50% {
+    transform: translateY(10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.navbar-card-content {
+  padding: 1.5rem;
+}
+
+.navbar-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.navbar-card-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFB8E0, #EC7FA9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: 3px solid white;
+  box-shadow: 0 4px 8px rgba(190, 89, 133, 0.3);
+}
+
+.navbar-card-titles {
+  flex: 1;
+}
+
+.navbar-card-titles h3 {
+  color: #BE5985;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 0.25rem 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbar-card-titles p {
+  color: #EC7FA9;
+  font-size: 0.95rem;
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbar-card-info {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.navbar-card-field {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #FFF0F5;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.navbar-card-field:hover {
+  transform: translateX(5px);
+}
+
+.navbar-card-field svg {
+  width: 20px;
+  height: 20px;
+  color: #EC7FA9;
+}
+
+.navbar-card-field-content {
+  flex: 1;
+}
+
+.navbar-card-field-label {
+  font-size: 0.8rem;
+  color: #BE5985;
+  margin-bottom: 0.25rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbar-card-field-value {
+  font-size: 0.95rem;
+  color: #BE5985;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbar-card-actions {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  border-top: 2px solid #FFB8E0;
+}
+
+.navbar-update-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #FFB8E0, #EC7FA9);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 3px 6px rgba(190, 89, 133, 0.3);
+}
+
+.navbar-update-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(190, 89, 133, 0.4);
+}
+
+.navbar-delete-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 2px solid #EC7FA9;
+  background-color: white;
+  color: #EC7FA9;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1rem;
+}
+
+.navbar-delete-btn:hover {
+  background-color: #FFF0F5;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar-component {
+    padding: 0 1rem;
+    height: 70px;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+  }
+
+  .navbar-logo-text {
+    font-size: 1.4rem;
+  }
+
+  .navbar-items {
+    gap: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .navbar-icon, .navbar-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .navbar-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navbar-user-card {
+    right: 1rem;
+    width: calc(100vw - 2rem);
+    max-width: 300px;
+  }
+}
+
+/* Animations */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+.navbar-icon:hover {
+  animation: wiggle 0.5s ease;
+}
+
+/* Accessibility Focus Styles */
+.navbar-icon:focus-visible,
+.navbar-avatar:focus-visible {
+  outline: 3px dashed #BE5985;
+  outline-offset: 2px;
+}
