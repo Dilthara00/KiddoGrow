@@ -1,0 +1,253 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(255, 204, 213, 0.8), rgba(162, 210, 255, 0.8)), url('/src/assets/images/kid-friendly-bg2.jpg') center/cover no-repeat; /* Background image with gradient overlay */
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* Kid-friendly font */
+  position: relative;
+  overflow: hidden;
+}
+
+.authContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23ffccd5" fill-opacity="0.1"/></svg>') center/cover no-repeat; /* Subtle pattern overlay */
+  z-index: 0;
+}
+
+.authInnerContainer {
+  width: 100%;
+  max-width: 600px;
+  background: #fff8dc; /* Creamy background */
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  border: 3px solid #ffb6c1; /* Pink border */
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.authHero {
+  display: none; /* Hide hero section for simplicity */
+}
+
+.authFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.authLogo {
+  display: none; /* Hide logo for simplicity */
+}
+
+.authHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.authTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4500; /* Bright orange */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.authForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff69b4; /* Pink */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formLabel::before {
+  content: '✨';
+  font-size: 1.2rem;
+  color: #ff4500; /* Orange */
+  animation: bounce 1.5s infinite;
+}
+
+.formInput {
+  width: 93%;
+  padding: 1rem;
+  border: 2px solid #ffb6c1; /* Pink border */
+  border-radius: 15px;
+  font-size: 1.1rem;
+  background: #f0f8ff; /* Light blue */
+  transition: all 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #32cd32; /* Green */
+  box-shadow: 0 0 8px rgba(50, 205, 50, 0.3);
+  background: white;
+}
+
+.skillsDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  min-height: 36px;
+  padding: 0.5rem;
+  background: #f0f8ff; /* Light blue */
+  border-radius: 15px;
+}
+
+.skillTag {
+  background: #87ceeb; /* Sky blue */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.skillInputContainer {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.addSkillButton {
+  font-size: 1.5rem;
+  color: white;
+  background: #ff69b4; /* Pink */
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.addSkillButton:hover {
+  background: #ff4500; /* Orange */
+  transform: scale(1.1);
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background: #32cd32; /* Green */
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #228b22;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.authFooter {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #ff69b4; /* Pink */
+}
+
+.authLink {
+  color: #32cd32; /* Green */
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.authLink:hover {
+  color: #228b22;
+  text-decoration: underline;
+}
+
+.authInnerContainer::after {
+  content: '🌟';
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 2rem;
+  opacity: 0.4;
+  animation: twinkle 1.5s infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@media (max-width: 768px) {
+  .authInnerContainer {
+      max-width: 90%;
+      padding: 1.5rem;
+  }
+
+  .authTitle {
+      font-size: 1.8rem;
+  }
+
+  .formInput,
+  .submitButton {
+      font-size: 1rem;
+      padding: 0.8rem;
+  }
+
+  .formLabel {
+      font-size: 1.1rem;
+  }
+
+  .addSkillButton {
+      width: 36px;
+      height: 36px;
+      font-size: 1.3rem;
+  }
+}
