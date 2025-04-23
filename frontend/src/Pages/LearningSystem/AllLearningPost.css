@@ -1,0 +1,667 @@
+.learning-container {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffebcd, #ffb6c1); /* Soft, cheerful gradient */
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* Kid-friendly font */
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 250px; /* Adjust for sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.learning-header {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 2rem;
+    background: #ffd1dc; /* Soft pink header */
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.learning-header::before {
+    content: '📚';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.learning-header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.learning-title {
+    font-size: 2.5rem;
+    color: #ff4500; /* Bright orange */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.learning-title svg {
+    animation: bounce 1.5s infinite;
+}
+
+.learning-subtitle {
+    font-size: 1.2rem;
+    color: #ff69b4; /* Bright pink */
+    opacity: 0.9;
+}
+
+.learning-actions {
+    margin-top: 1rem;
+}
+
+.learning-filters {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.learning-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #f0f8ff; /* Light blue */
+    padding: 0.75rem;
+    border-radius: 15px;
+    border: 2px solid #ffb6c1; /* Pink border */
+    position: relative;
+}
+
+.learning-search-input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    color: #ff4500; /* Orange text */
+}
+
+.learning-search-input:focus {
+    outline: none;
+}
+
+.learning-search-clear {
+    background: none;
+    border: none;
+    color: #ff4040; /* Red */
+    cursor: pointer;
+}
+
+.learning-filter-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #f0f8ff;
+    padding: 0.75rem;
+    border-radius: 15px;
+    border: 2px solid #ffb6c1;
+}
+
+.learning-filter-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ff69b4; /* Pink */
+    font-weight: bold;
+}
+
+.learning-filter-select {
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    color: #ff4500; /* Orange */
+}
+
+.learning-filter-select:focus {
+    outline: none;
+}
+
+.learning-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.learning-form {
+    background: #fff8dc; /* Creamy background */
+    border-radius: 25px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #87ceeb; /* Sky blue border */
+    position: relative;
+}
+
+.learning-form::after {
+    content: '✨';
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.learning-form-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.learning-form-title {
+    font-size: 2rem;
+    color: #32cd32; /* Green */
+    font-weight: bold;
+}
+
+.learning-form-subtitle {
+    font-size: 1.1rem;
+    color: #ff4500; /* Orange */
+    opacity: 0.8;
+}
+
+.learning-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ffb6c1; /* Pink */
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.learning-close-btn:hover {
+    background: #ff8c94;
+}
+
+.learning-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.learning-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.learning-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff69b4; /* Pink */
+}
+
+.learning-label svg {
+    color: #ff4500; /* Orange */
+    animation: bounce 1.5s infinite;
+}
+
+.learning-input,
+.learning-textarea {
+    padding: 1rem;
+    border: 2px solid #ffb6c1; /* Pink */
+    border-radius: 15px;
+    font-size: 1.1rem;
+    background: #f0f8ff; /* Light blue */
+    transition: all 0.3s ease;
+}
+
+.learning-input:focus,
+.learning-textarea:focus {
+    outline: none;
+    border-color: #32cd32; /* Green */
+    box-shadow: 0 0 8px rgba(50, 205, 50, 0.3);
+    background: white;
+}
+
+.learning-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.learning-input.error,
+.learning-textarea.error {
+    border-color: #ff4040; /* Red */
+    background: #fff0f0;
+}
+
+.learning-tags-input {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.learning-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.learning-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #87ceeb; /* Sky blue */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.learning-tag-remove {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.learning-btn-secondary {
+    background: #ffb6c1; /* Pink */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learning-btn-secondary:hover {
+    background: #ff8c94;
+    transform: scale(1.05);
+}
+
+.learning-input-help {
+    font-size: 0.9rem;
+    color: #ff4500; /* Orange */
+    opacity: 0.8;
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ff4040;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.error-message svg {
+    color: #ff4040;
+}
+
+.learning-form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.learning-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learning-btn-primary {
+    background: #32cd32; /* Green */
+    color: white;
+    border: none;
+}
+
+.learning-btn-primary:hover {
+    background: #228b22;
+    transform: scale(1.05);
+}
+
+.learning-btn-primary:disabled {
+    background: #a9a9a9;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.learning-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    color: #ff4500; /* Orange */
+}
+
+.learning-loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+.learning-empty {
+    text-align: center;
+    margin-top: 4rem;
+    color: #ff4500; /* Orange */
+}
+
+.learning-empty-icon {
+    margin-bottom: 1rem;
+}
+
+.learning-empty-icon svg {
+    color: #ff69b4; /* Pink */
+}
+
+.learning-empty-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.learning-results-info {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #ff4500; /* Orange */
+}
+
+.learning-btn-text {
+    background: none;
+    border: none;
+    color: #ff69b4; /* Pink */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.learning-btn-text:hover {
+    color: #ff4040;
+}
+
+.learning-grid {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    gap: 2rem;
+}
+
+.learning-card {
+    background: #fff8dc; /* Creamy */
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffb6c1; /* Pink */
+    transition: transform 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: scale(1.03);
+}
+
+.learning-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.learning-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.learning-avatar {
+    width: 40px;
+    height: 40px;
+    background: #87ceeb; /* Sky blue */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.learning-author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.learning-author-name {
+    font-weight: bold;
+    color: #ff4500; /* Orange */
+}
+
+.learning-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ff69b4; /* Pink */
+    font-size: 0.9rem;
+}
+
+.learning-actions-compact {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.learning-btn-update,
+.learning-btn-delete {
+    background: none;
+    border: none;
+    color: #ff4500; /* Orange */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.learning-btn-update:hover {
+    color: #32cd32; /* Green */
+}
+
+.learning-btn-delete:hover {
+    color: #ff4040; /* Red */
+}
+
+.learning-card-content {
+    margin-bottom: 1rem;
+}
+
+.learning-card-title {
+    font-size: 1.5rem;
+    color: #ff4500; /* Orange */
+    margin-bottom: 0.5rem;
+}
+
+.learning-card-description {
+    font-size: 1rem;
+    color: #ff69b4; /* Pink */
+    margin-bottom: 1rem;
+}
+
+.learning-media {
+    margin-bottom: 1rem;
+}
+
+.learning-media iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    border: none;
+}
+
+.learning-content-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #32cd32; /* Green */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.learning-content-link:hover {
+    color: #228b22;
+}
+
+.learning-card-footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.learning-like-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #ff4500; /* Orange */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.learning-like-btn.liked {
+    color: #ff4040; /* Red */
+}
+
+.learning-like-btn:hover {
+    color: #ff4040;
+}
+
+.learning-fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #32cd32; /* Green */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learning-fab:hover {
+    background: #228b22;
+    transform: scale(1.1);
+}
+
+.learning-scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 7rem;
+    background: #ffb6c1; /* Pink */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learning-scroll-top:hover {
+    background: #ff8c94;
+    transform: scale(1.1);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .learning-header {
+        padding: 1rem;
+    }
+
+    .learning-form {
+        padding: 1.5rem;
+    }
+
+    .learning-title {
+        font-size: 2rem;
+    }
+
+    .learning-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .learning-fab,
+    .learning-scroll-top {
+        bottom: 1.5rem;
+    }
+
+    .learning-fab {
+        right: 1.5rem;
+    }
+
+    .learning-scroll-top {
+        right: 5.5rem;
+    }
+}
