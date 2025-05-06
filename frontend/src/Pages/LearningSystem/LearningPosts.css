@@ -124,15 +124,13 @@
 }
 
 .cardDescription {
-  font-size: 16px;
-  color: #4b5563;
-  line-height: 1.5;
+  font-size: 14px;
+  color: #6D6875; /* Soft purple-gray */
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 .tag {
