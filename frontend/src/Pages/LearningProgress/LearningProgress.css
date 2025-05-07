@@ -9,14 +9,14 @@
 }
 
 .progress-container main {
-  flex: 1;
-  margin-left: 250px;
-  margin-top: 80px;
-  padding: 2rem;
-  width: calc(100% - 250px);
-  min-height: calc(100vh - 80px);
-  position: relative;
-  z-index: 2;
+  flex: 1; /* Allows the main content to grow and fill available space in a flex container */
+  margin-left: 250px; /* Creates space on the left, likely for a sidebar of fixed width */
+  margin-top: 80px; /* Creates space on the top, likely for a fixed header */
+  padding: 2rem; /* Adds spacing inside the element for inner content */
+  width: calc(100% - 250px); /* Sets the width to account for the left margin (e.g., sidebar width) */
+  min-height: calc(100vh - 80px); /* Ensures the main content fills the viewport height minus the top margin (e.g., header height) */
+  position: relative; /* Sets positioning context for absolutely positioned child elements */
+  z-index: 2; /* Ensures the main content is stacked above elements with a lower z-index */
 }
 
 /* Header Styles - Playful Design */
