@@ -9,11 +9,11 @@
 }
 
 .progress-main-content {
-  flex: 1;
-  padding: 2rem;
-  margin-left: 250px; /* Adjust based on sidebar width */
-  display: flex;
-  justify-content: center;
+  flex: 1; /* Allows this container to grow and fill available space within a flex layout */
+  padding: 2rem; /* Adds space inside the container for inner elements */
+  margin-left: 250px; /* Offsets content to the right to make room for a sidebar (250px wide) */
+  display: flex; /* Enables flexbox layout for child elements */
+  justify-content: center; /* Centers child elements horizontally within the container */
 }
 
 /* Form Container - Playful Design */
