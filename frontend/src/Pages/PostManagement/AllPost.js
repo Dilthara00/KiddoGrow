@@ -337,7 +337,7 @@ function AllPost() {
                     <div className="post-user-info">
                       <div className="post-user-name">{postOwners[post.userID] || 'Anonymous'}</div>
                       <div className="post-date">
-                        <Clock size={14} />
+                        <Clock size={16} />
                         {new Date(post.createdAt).toLocaleDateString()}
                       </div>
                     </div>
