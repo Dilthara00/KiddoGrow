@@ -173,7 +173,7 @@
 .form-textarea:focus {
   outline: none;
   border-color: #4CC9F0;
-  background: white;
+  background: rgb(245, 234, 234);
   box-shadow: 0 0 0 4px rgba(76, 201, 240, 0.3);
 }
 
