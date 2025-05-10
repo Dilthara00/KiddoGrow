@@ -1,8 +1,11 @@
+/* PostStyles.module.css - Child-friendly color scheme */
+
 .container {
   max-width: 1200px;
   height: 628px;
   margin: 0 auto;
   padding: 32px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   background: #f0f9ff;
@@ -10,6 +13,10 @@
   box-shadow: 0 12px 28px rgba(66, 153, 225, 0.15);
   font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive;
   border: 6px solid #4cc2ff;
+  background: #fff9f0; /* Soft off-white with warm tint */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  font-family: 'Inter', sans-serif;
 }
 
 .header {
@@ -19,18 +26,24 @@
   margin-bottom: 28px;
   padding-bottom: 16px;
   border-bottom: 3px dashed #ffb347;
+  margin-bottom: 24px;
 }
 
+/* css styles for the title*/
 .title {
   font-size: 32px;
   font-weight: bold;
   color: #ff6b6b;
   text-shadow: 1px 1px 0 #ffd166;
+  font-size: 28px;
+  font-weight: 600;
+  color: #FF6B6B; /* Playful coral color */
 }
 
 .actions {
   display: flex;
   gap: 16px;
+  gap: 12px;
 }
 
 .button {
@@ -38,15 +51,22 @@
   align-items: center;
   gap: 8px;
   background-color: #4cc2ff;
+  gap: 6px;
+  background-color: #4ECDC4; /* Bright teal */
   color: #fff;
   padding: 12px 18px;
   border-radius: 50px;
   border: 3px solid #0096d6;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 0 #0096d6;
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
 .button.secondary {
@@ -54,6 +74,8 @@
   color: #ff8c42;
   border: 3px solid #ffb347;
   box-shadow: 0 4px 0 #ffb347;
+  background-color: #FFD166; /* Sunny yellow */
+  color: #333;
 }
 
 .button:hover {
@@ -72,6 +94,7 @@
 
 .button.secondary:active {
   box-shadow: 0 2px 0 #ffb347;
+  background-color: #45B8B0; /* Darker teal */
 }
 
 .card {
@@ -84,11 +107,18 @@
   padding: 24px;
   transition: all 0.3s ease;
   margin-bottom: 20px;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #FFDAC1; /* Soft peach border */
+  border-radius: 12px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(255, 188, 66, 0.2);
+  box-shadow: 0 4px 16px rgba(255, 107, 107, 0.1); /* Coral tinted shadow */
 }
 
 .cardHeader {
@@ -100,39 +130,46 @@
 .author {
   display: flex;
   gap: 12px;
+  gap: 10px;
   align-items: center;
 }
 
 .avatar {
   width: 48px;
   height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
   background-color: #a3e635;
   border: 3px solid #65a30d;
+  background-color: #A5D8FF; /* Light sky blue */
 }
 
 .cardContent {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  gap: 8px;
 }
 
 .cardTitle {
   font-size: 24px;
   font-weight: bold;
   color: #6366f1;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2EC4B6; /* Bright turquoise */
 }
 
 .cardDescription {
-  font-size: 16px;
-  color: #4b5563;
-  line-height: 1.5;
+  font-size: 14px;
+  color: #6D6875; /* Soft purple-gray */
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .tag {
@@ -143,6 +180,11 @@
   font-size: 14px;
   font-weight: bold;
   border: 2px dashed #9333ea;
+  background-color: #FF9E7D; /* Soft orange */
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
 }
 
 .footer {
@@ -151,12 +193,14 @@
   align-items: center;
   gap: 18px;
   margin-top: 16px;
+  gap: 12px;
 }
 
 .likeButton {
   display: flex;
   align-items: center;
   gap: 8px;
+  gap: 6px;
   background: none;
   border: none;
   cursor: pointer;
@@ -167,8 +211,10 @@
 
 .likeButton:hover {
   transform: scale(1.1);
+  color: #B5EAD7; /* Mint green */
 }
 
 .likeButton.liked {
   color: #ec4899;
+  color: #FF6B6B; /* Coral color for liked state */
 }
