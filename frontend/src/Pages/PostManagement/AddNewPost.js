@@ -145,7 +145,7 @@ function AddNewPost() {
                 <div className="media-upload-text">
                   <strong>Click to upload</strong> or drag and drop
                   <br />
-                  Images or videos (max 5 files)
+                  Images or videos (up to 5 files)
                 </div>
               </label>
               <input
@@ -192,7 +192,7 @@ function AddNewPost() {
               <button 
                 type="button" 
                 className="form-btn form-btn-secondary"
-                onClick={() => window.location.href = '/allPost'}
+                onClick={() => window.location.href = '/allPos'}
               >
                 <X size={18} />
                 Cancel
