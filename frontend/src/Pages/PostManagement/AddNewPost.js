@@ -192,7 +192,7 @@ function AddNewPost() {
               <button 
                 type="button" 
                 className="form-btn form-btn-secondary"
-                onClick={() => window.location.href = '/allPos'}
+                onClick={() => window.location.href = '/allPost'}
               >
                 <X size={18} />
                 Cancel
