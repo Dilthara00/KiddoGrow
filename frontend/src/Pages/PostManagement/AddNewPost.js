@@ -38,7 +38,7 @@ function AddNewPost() {
         video.onloadedmetadata = () => {
           URL.revokeObjectURL(video.src);
           if (video.duration > 30) {
-            alert(`Video ${file.name} exceeds the maximum duration of 30 seconds.`);
+            alert(`Video ${file.name} Exceeds the maximum duration of 30 seconds.try Again`);
             return;
           }
         };
@@ -92,7 +92,7 @@ function AddNewPost() {
       window.location.reload();
     } catch (error) {
       console.error(error);
-      alert('Failed to create post.');
+      alert('Failed to create post.Try Again');
     } finally {
       setIsLoading(false);
     }
