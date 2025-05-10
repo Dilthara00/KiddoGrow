@@ -3,7 +3,7 @@
   display: flex;
   min-height: 100vh;
   background: linear-gradient(135deg, #ffebcd 0%, #ffe4e1 100%); /* Soft pastel gradient for kids */
-  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* Fun, kid-friendly font */
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* Fun, kid-friendly font*/
 }
 
 /* Main Content */
