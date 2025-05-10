@@ -54,7 +54,7 @@
   border: 4px solid white;
   outline: 3px dashed var(--accent1);
 }
-
+/* */
 .learning-header::before {
   content: '';
   position: absolute;
