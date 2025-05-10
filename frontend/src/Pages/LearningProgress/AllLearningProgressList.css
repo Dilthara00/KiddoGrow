@@ -6,7 +6,6 @@
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,20 L30,20 L30,30 L20,30 Z' fill='%23FFD0EF' fill-opacity='0.4'/%3E%3C/svg%3E");
   font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
 }
-
 .progress-main-content {
   flex: 1;
   padding: 2rem;
